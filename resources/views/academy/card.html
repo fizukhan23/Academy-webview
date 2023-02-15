@@ -1,0 +1,309 @@
+<heading>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pure CSS Responsive Card Hover Effect</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</heading>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .title {
+    font-size: 60px;
+    padding: 20px 0px;
+  }
+
+  .container {
+    width: 900px;
+    margin: 0px auto;
+  }
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+
+  /* Remove extra left and right margins, due to padding */
+  .row {
+    margin: 0 -5px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive columns */
+  @media screen and (max-width: 700px) {
+    .container {
+      width: 100%;
+    }
+
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .card .profile {
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  .card:hover .profile {
+    transform: scale(1.4);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .card .content {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    overflow: hidden;
+  }
+  .card .content .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1e6;
+    transition: 1s;
+
+    z-index: 1;
+    padding: 10px;
+  }
+
+  .from-left {
+    top: 0;
+    left: -100%;
+  }
+  .card:hover .content .from-left {
+    left: 0%;
+  }
+
+  .from-bottom {
+    top: 100%;
+    left: 0;
+  }
+  .card:hover .content .from-bottom {
+    top: 0%;
+  }
+
+  .from-right {
+    top: 0%;
+    right: -100%;
+  }
+  .card:hover .content .from-right {
+    right: 0;
+  }
+
+  .card .content .back h3 {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .card .content .back .tem-img {
+    border-radius: 100%;
+  }
+
+  .card .content .back .des {
+    font-size: 13px;
+    padding: 20px 0px;
+  }
+  .card .content .back .social-icon {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  .card .content .back .social-icon li {
+    display: inline-block;
+  }
+
+  .card .content .back .social-icon li a {
+    display: block;
+    background: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+  }
+</style>
+<div class="container">
+  <center>
+    <h1 class="title">Pure CSS Responsive Card Hover Effect</h1>
+  </center>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img
+              class="profile"
+              width="100%"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/neymar2.jpg?raw=true"
+              alt="Neymar"
+            />
+            <h2>Neymar</h2>
+          </div>
+          <div class="back from-left">
+            <h2>Neymar</h2>
+            <h3>10</h3>
+            <h3>PSG | BRA</h3>
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/psg.jpg?raw=true"
+              alt=""
+            />
+            &nbsp;
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/bra.jpg?raw=true"
+              alt=""
+            />
+            <br />
+            <p class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, in
+              animi doloribus reprehenderit debitis voluptas pariatur eaque!
+              Rem, accusamus tempora?
+            </p>
+            <ul class="social-icon">
+              <li>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img
+              class="profile"
+              width="100%"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/cr7.jpg?raw=true"
+              alt="Ronaldo"
+            />
+            <h2>Cristiano Ronaldo</h2>
+          </div>
+          <div class="back from-bottom">
+            <h2>Cristiano Ronaldo</h2>
+            <h3>7</h3>
+            <h3>JUV | POR</h3>
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/juv.jpg?raw=true"
+              alt=""
+            />
+            &nbsp;
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/port.jpg?raw=true"
+              alt=""
+            />
+            <br />
+            <p class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, in
+              animi doloribus reprehenderit debitis voluptas pariatur eaque!
+              Rem, accusamus tempora?
+            </p>
+            <ul class="social-icon">
+              <li>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img
+              class="profile"
+              width="100%"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/messi.jpg?raw=true"
+              alt="Messi"
+            />
+            <h2>Lionel Messi</h2>
+          </div>
+          <div class="back from-right">
+            <h2>Lionel Messi</h2>
+            <h3>10</h3>
+            <h3>BAR | ARG</h3>
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/f.jpg?raw=true"
+              alt=""
+            />
+            &nbsp;
+            <img
+              class="tem-img"
+              src="https://github.com/free-source-code-bd/all-public-resource/blob/main/arg.jpg?raw=true"
+              alt=""
+            />
+            <br />
+            <p class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, in
+              animi doloribus reprehenderit debitis voluptas pariatur eaque!
+              Rem, accusamus tempora?
+            </p>
+            <ul class="social-icon">
+              <li>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<center>
+  <a target="_blank" href="https://insidethediv.com">Find Me</a>
+</center>

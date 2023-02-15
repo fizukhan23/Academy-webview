@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .gallery {
+      width: 700px;
+      height: 380px;
+      margin: 20px auto;
+      box-sizing: border-box;
+    }
+
+    .holder {
+      width: 200px;
+      height: 150px;
+      margin: 15px;
+      float: left;
+    }
+
+    .holder img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      transition: opacity 1s, transform 0.7s ease-in;
+    }
+
+    img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: 1px 3px 8px 4px rgb(195, 195, 195);
+    }
+  </style>
+  <body>
+    <div class="gallery">
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1502214722586-9c0a74759710?auto=format&fit=crop&w=752&q=80"
+        />
+      </div>
+
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1464692805480-a69dfaafdb0d?auto=format&fit=crop&w=750&q=80"
+        />
+      </div>
+
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1481233673589-df886804ee96?auto=format&fit=crop&w=750&q=80"
+        />
+      </div>
+
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1478145787956-f6f12c59624d?auto=format&fit=crop&w=750&q=80"
+        />
+      </div>
+
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1512248805576-c1b31f6fcab1?auto=format&fit=crop&w=751&q=80"
+        />
+      </div>
+
+      <div class="holder">
+        <img
+          src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=753&q=80"
+        />
+      </div>
+    </div>
+  </body>
+</html>
